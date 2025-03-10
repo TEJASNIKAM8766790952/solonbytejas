@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./Models/db');
 const userRoutes = require('./routes/userRoutes');
-const appointmentRoutes = require('./routes/Appointments');
+const appointmentRoutes = require('./routes/Appointments.js');
 const AuthRouter = require('./routes/AuthRouters');
 // const ProductRouter = require('./routes/ProductRouter');
 
