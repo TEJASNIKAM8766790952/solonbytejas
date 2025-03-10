@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./Models/db');
 const userRoutes = require('./routes/userRoutes');
-const appointmentRoutes = require('./routes/Appointments.js');
+const appointmentRoutes = require('./routes/Appointments');
 const AuthRouter = require('./routes/AuthRouters');
 // const ProductRouter = require('./routes/ProductRouter');
 
@@ -24,8 +24,8 @@ app.get('/start', (req, res) => {
 });
 
 // Route groups
-app.use('/api', userRoutes);
-app.use('/api', appointmentRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/appointments', appointmentRoutes);
 app.use('/auth', AuthRouter);
 // app.use('/products', ProductRouter);
 
