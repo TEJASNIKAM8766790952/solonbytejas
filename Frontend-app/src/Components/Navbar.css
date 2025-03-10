@@ -1,0 +1,177 @@
+/* General Navbar Styles */
+.nav1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.nav1 h1 {
+    flex-grow: 1;
+    font-size: 1.5rem;
+}
+
+.nav1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.nav2 li {
+    margin: 0 10px;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Form and Button Styles */
+.form-control {
+    margin-left: 10px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+.btn-outline-success {
+    margin-left: 10px;
+    color: white;
+    border-color: white;
+    padding: 5px 10px;
+}
+
+.btn-outline-success:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Search Results */
+.search-results {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 300px;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-results li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.search-results li:last-child {
+    border-bottom: none;
+}
+
+.search-results li:hover {
+    background-color: #f8f9fa;
+}
+
+/* Responsive Styles */
+
+/* Medium Screens (992px and below) */
+@media screen and (max-width: 992px) {
+    .nav2 {
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 0; /* Initially hidden */
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav2.open {
+        max-height: 300px; /* Adjust this value based on your content */
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Small Screens (768px and below) */
+@media screen and (max-width: 768px) {
+    .nav1 {
+        flex-direction: column;
+    }
+
+    .nav2 {
+        align-items: center;
+    }
+
+    .hamburger {
+        font-size: 2rem;
+    }
+
+    .btn-outline-success {
+        margin: 5px 0;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+}
+
+/* Extra Small Screens (576px and below) */
+@media screen and (max-width: 576px) {
+    .nav1 {
+        align-items: flex-start;
+    }
+
+    .nav2 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        font-size: 2rem;
+    }
+
+    .btn-outline-success {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}

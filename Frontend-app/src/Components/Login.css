@@ -1,0 +1,102 @@
+/* Container for the login form */
+body {
+  background-image: url('../Image/salon6.jpg'); /* Path to the uploaded image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Make the image stay in place when scrolling */
+}
+
+.login-container {
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+  background-color: rgba(255, 255, 255, 0.3); /* More transparent background */
+  backdrop-filter: blur(10px); /* Blurring the background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  color: white;
+  margin: 100px auto; /* Center horizontally */
+  position: relative; /* Relative position for better centering */
+}
+
+/* Styling the form labels */
+.login-form label {
+  font-size: 1.2rem;
+  color: #f7e6c2; /* Soft light yellow */
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.appointment-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(253, 251, 251);
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgb(5, 251, 239); /* Add a shadow effect */
+}
+
+/* Input fields */
+.login-form input {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+}
+
+.login-form input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Styling the button */
+.login-form button {
+  background-color: #ff416c; /* Bright pink */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.login-form button:hover {
+  background-color: #ff4b2b; /* Darker pink */
+}
+
+/* Email and password output */
+h3 {
+  color: #ffffff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .login-form label {
+    font-size: 1rem;
+  }
+
+  .login-form input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .login-form button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}

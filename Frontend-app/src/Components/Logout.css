@@ -1,0 +1,12 @@
+.logout-button {
+    background: none;
+    border: none;
+    color: rgb(241, 236, 236);
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}
